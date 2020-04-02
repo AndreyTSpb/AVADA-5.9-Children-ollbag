@@ -1,0 +1,57 @@
+/*
+Theme Name: Avada-5.9.1-Дочерняя тема
+Template: Avada-5.9.1
+
+Description: Дочерняя тема для темы Avada-5.9.1
+Author: Андрей
+Version: 1.0
+*/
+
+/* импортируем стили родительской темы */
+/* @import url("../Avada-5.9.1/style.css"); */
+
+/* Свои дополнительные стили */
+
+/*
+    Отключаем отображение переключателя сетка или лист товаров
+*/
+.woocommerce-container .fusion-grid-view,
+.woocommerce-container .fusion-grid-list-view{
+    display: none;
+}
+
+/*
+    Удаляем подпись в верхнем меню 
+*/
+.fusion-main-menu>ul>li>a .fusion-menu-description{
+    display: none;
+}
+/*
+    Блок с итогами по корзине cart-totals.php 
+*/
+.float-right{
+    float:right;
+    width: 100%;
+}
+
+.z-inp-ico {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/*
+    Ссылка отом что прочел правила!!!
+*/
+.block-read-pryvate-policy .link-pryvate-policy-readme{
+    font-weight: bold;
+}
+
+.block-read-pryvate-policy .link-pryvate-policy-readme a{
+    color: mediumblue;
+}
+
+.block-order-submit{
+    width: 50%;
+    float: right;
+    text-align: right;
+}
