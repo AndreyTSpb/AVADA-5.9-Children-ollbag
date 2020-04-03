@@ -131,3 +131,5 @@ function translate_text($translated) {
     $translated = str_ireplace('You Have %s Items In Your Cart', 'В вашей корзине %s Товара', $translated);
     return $translated;
 }
+
+add_filter('woocommerce_helper_suppress_admin_notices', '__return_true');
