@@ -55,3 +55,11 @@ Version: 1.0
     float: right;
     text-align: right;
 }
+
+/*Меняем местами поляфамилия и имя*/
+form.checkout #billing_last_name_field{
+    float: left;  
+}
+form.checkout #billing_first_name_field{
+    float: right;
+}
