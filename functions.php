@@ -123,7 +123,7 @@ if(strpos($_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'], '/product-category/
 }
 
 // замена стандартных текстов
-//add_filter('gettext', 'translate_text');
+add_filter('gettext', 'translate_text');
 add_filter('ngettext', 'translate_text');
  
 function translate_text($translated) {
