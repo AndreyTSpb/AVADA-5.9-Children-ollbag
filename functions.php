@@ -47,16 +47,7 @@ function child_remove_parent_before_cart_avada() {
 }
 
 add_action( 'wp_loaded', 'child_remove_parent_before_cart_avada' );
-//Add new function and hook - сейчас не нужно название итак есть.
-//add_action( 'woocommerce_before_cart_table', 'avada_woocommerce_before_cart_table_zen', 26 );
-function avada_woocommerce_before_cart_table_zen( $args ) {
-	global $woocommerce;
 
-	$html = '<div class="zen woocommerce-content-box full-width clearfix">';
-	
-		$html .= '<h2>' . sprintf( esc_html( _n( 'You Have %s Item In Your Cart','You Have  %s Item(s) In Your Cart1', $woocommerce->cart->get_cart_contents_count(), 'avada_child' )), $woocommerce->cart->get_cart_contents_count() ) . '</h2>';
-		echo $html;
-}
 
 //To delete avada_social_share block after product loop (as i cant change avada/includes/woo-config.php to childs theme one) 
 //and i use instead of it any share plugin
@@ -122,14 +113,5 @@ if(strpos($_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'], '/product-category/
 
 }
 
-// замена стандартных текстов
-add_filter('gettext', 'translate_text');
-add_filter('ngettext', 'translate_text');
- 
-function translate_text($translated) {
-    $translated = str_ireplace('Item(s)', 'Товар(ов)', $translated);
-    $translated = str_ireplace('You Have %s Items In Your Cart', 'В вашей корзине %s Товара', $translated);
-    return $translated;
-}
 
 add_filter('woocommerce_helper_suppress_admin_notices', '__return_true');
